@@ -23,7 +23,7 @@ def divComplexNumber(   complexNumber1, complexNumber2 ):
 	
 	try :
 		answ =( ( complexNumber1[ 0 ] * complexNumber2[ 0 ] + complexNumber1[ 1 ] * complexNumber2[ 1 ] )/div,
-			   ( complexNumber1[ 0 ] * complexNumber2[ 0 ] - complexNumber1[ 1 ] * complexNumber2[ 1 ] ) /div )
+			   ( complexNumber2[ 0 ] * complexNumber1[ 1 ] - complexNumber1[ 0 ] * complexNumber2[ 1 ] ) /div )
 
 		return answ
 		
@@ -41,9 +41,11 @@ def module( complexNumber ):
 	
 	return answ
 
-def cartesianToPolar( complexnumber ):
-	angle = math.degrees( ( math.atan( complexNumber[ 1 ] / complexNumber[ 0 ] ) ) )
+def phase( complexNumber ):
+    return math.degrees( ( math.atan( complexNumber[ 1 ] / complexNumber[ 0 ] ) ) )
+
+def cartesianToPolar( complexNumber ):
+	angle = phase( complexNumber  )
 	answ = ( module( complexNumber) ,
 			angle )
-	
-	return answ      
+	return answ 
