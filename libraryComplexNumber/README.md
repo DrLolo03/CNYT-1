@@ -1,5 +1,5 @@
 # CNYT
-Ciencias naturales y tecnologia
+**Ciencias naturales y tecnologia**
 
 En este laboratorio se realizo la implementacion de una libreria sobre numeros complejos, la cual es capaz de calcular:
 
