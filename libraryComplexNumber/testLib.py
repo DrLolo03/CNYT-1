@@ -6,6 +6,11 @@ class TestLibComplex(unittest.TestCase):
         a = ( 5, 8 )
         b = ( 1, 2 )
         self.assertEqual( suma( a, b ), ( 6, 10 ) )
+
+    def testSub(self):
+        a = ( 5, 8 )
+        b = ( 1, 2 )
+        self.assertEqual( suma( a, b ), ( 6, 10 ) )
         
         
 
