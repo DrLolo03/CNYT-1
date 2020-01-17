@@ -19,7 +19,7 @@ def multComplexNumber(  complexNumber1, complexNumber2 ):
 	return answ
 
 def divComplexNumber(   complexNumber1, complexNumber2 ):
-	div = complexNumber2[0]**2 + complexNumber2[1]**2
+	div = ( complexNumber2[0] ) **2 + ( complexNumber2[1] ) **2
 	
 	try :
 		answ =( ( complexNumber1[ 0 ] * complexNumber2[ 0 ] + complexNumber1[ 1 ] * complexNumber2[ 1 ] )/div,
@@ -37,12 +37,23 @@ def conjugated( complexNumber ):
 	return answ
 
 def module( complexNumber ):
-	answ = math.sqrt( complexNumber[ 0 ]**2 + complexNumber[ 1 ] **2 )
+	answ = math.sqrt( (complexNumber[ 0 ])**2 + (complexNumber[ 1 ]) **2 )
 	
 	return answ
 
 def phase( complexNumber ):
-    return math.degrees( ( math.atan( complexNumber[ 1 ] / complexNumber[ 0 ] ) ) )
+        x, y = complexNumber[ 0 ], complexNumber[ 1 ]
+
+        if ( x < 0 and y < 0 ) or ( x < 0 and y >= 0 ):
+                return 180 + math.degrees( (  math.atan( complexNumber[ 1 ] / complexNumber[ 0 ] ) ) )
+        
+        elif x >= 0 and y < 0:
+                return 360 + math.degrees( (  math.atan( complexNumber[ 1 ] / complexNumber[ 0 ] ) ) )
+
+        else:
+                return math.degrees( (  math.atan( complexNumber[ 1 ] / complexNumber[ 0 ] ) ) )
+                
+        
 
 def cartesianToPolar( complexNumber ):
 	angle = phase( complexNumber  )
