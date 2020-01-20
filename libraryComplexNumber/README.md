@@ -11,3 +11,5 @@ En este repositorio se realizo la implementacion de una libreria sobre numeros c
 - Conjugado
 - Conversión entre representaciones polar y cartesiano
 - Retornar la fase de un número complejo.
+
+Este repositorio fue realizado por **Iván Camilo Rincón Saavedra**.
