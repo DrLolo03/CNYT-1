@@ -1,0 +1,74 @@
+
+
+def sumaVectores( vect1, vect2 ):
+    lon = len( vect1 )
+    
+    if ( lon == len( vect2 ) ):
+        answ = [ 0 ] * lon
+        for x in range( lon ):
+            answ[ x ] = ( vect1[ x ] + vect2[ x ] )
+            
+    return answ
+            
+
+def inversaVectores( vect ):
+    lon = len( vect )
+    for x in range( lon ):
+        numComplex = vect[ x ]
+
+        vect[ x ] = complex( numComplex[ 0 ],-numComplex[ 1 ] )
+    return vect
+
+def multiplicaMat( mat1, mat2):
+    fil1, col1 = len( mat1 ),len( mat1[ 0 ] )
+    fil2, col2 =  len( mat2 ), len( mat2[ 0 ] )
+
+    if ( col1 == fil2 ):
+        answ = [ [ complex(0) ]* col2 ] * fil1
+        for i in range( fil1 ):
+                
+            for j in range( col2 ):
+        
+                for z in range( fil2 ):
+                    answ[ i ][ j ] +=  mat1[ i ][ z ] * mat2[ z ][ j ]
+
+        return answ
+    return "Las dimensiones de las matrices, no son los adecuados para su multiplicacion"
+
+        
+
+            
+
+
+def sumaMat( mat1, mat2 ):
+    pass
+
+
+def multiEscal( escalar, matriz ):
+    pass
+    
+
+def matrizTransp( matriz ):
+    fil, col = len( matriz ), len( matriz[ 0 ] )
+    anws  = [ [ 0 ] *fil ] * col
+    
+    for i in range( fil ):
+        for j in range( col ):
+            answ[ j ][ i ] = matriz[ i ][ j ]
+
+    return answ
+    
+
+
+def main():
+    a = complex(1,1)
+    b = complex(2,2)
+    
+    print( sumaVectores( [ a, b ], [a ,b ] ) )
+    print ( sumaMat( [ [ a,a ],[ b,b ] ] , [ [ a,a ],[ b,b ] ] ) )
+    print( multiplicaMat( [ [ a,a ],[ b,b ] ] , [ [ a,a ],[ b,b ] ] ) )
+    
+    
+main()             
+    
+    
