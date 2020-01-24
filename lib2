@@ -16,7 +16,7 @@ def inversaVectores( vect ):
     for x in range( lon ):
         numComplex = vect[ x ]
 
-        vect[ x ] = complex( numComplex[ 0 ],-numComplex[ 1 ] )
+        vect[ x ][ 1 ] = -vect[ x ][ 1 ]
     return vect
 
 def multiplicaMat( mat1, mat2):
