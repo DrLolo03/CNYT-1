@@ -1,20 +1,20 @@
 import math
 
 def suma(  complexNumber1, complexNumber2 ):
-	answ = ( complexNumber1[ 0 ] + complexNumber2[ 0 ],
-			 complexNumber1[ 1 ] + complexNumber2[ 1 ]) 		 
+	answ = [ complexNumber1[ 0 ] + complexNumber2[ 0 ],
+			 complexNumber1[ 1 ] + complexNumber2[ 1 ] ]
 	return answ
 
 
 def sub( complexNumber1, complexNumber2 ):
-	answ = ( complexNumber1[ 0 ] - complexNumber2[ 0 ],
-			 complexNumber1[ 1 ] - complexNumber2[ 1 ] )
+	answ = [ complexNumber1[ 0 ] - complexNumber2[ 0 ],
+			 complexNumber1[ 1 ] - complexNumber2[ 1 ] ]
 	
 	return answ
 
 def multComplexNumber(  complexNumber1, complexNumber2 ):
-	answ = ( complexNumber1[ 0 ] * complexNumber2[ 0 ] - complexNumber1[ 1 ] * complexNumber2[ 1 ],
-			  complexNumber1[ 1 ] * complexNumber2[ 0 ] + complexNumber1[ 0 ] * complexNumber2[ 1 ])
+	answ = [ complexNumber1[ 0 ] * complexNumber2[ 0 ] - complexNumber1[ 1 ] * complexNumber2[ 1 ],
+			  complexNumber1[ 1 ] * complexNumber2[ 0 ] + complexNumber1[ 0 ] * complexNumber2[ 1 ] ]
 	
 	return answ
 
@@ -22,8 +22,8 @@ def divComplexNumber(   complexNumber1, complexNumber2 ):
 	div = ( complexNumber2[0] ) **2 + ( complexNumber2[1] ) **2
 	
 	try :
-		answ =( ( complexNumber1[ 0 ] * complexNumber2[ 0 ] + complexNumber1[ 1 ] * complexNumber2[ 1 ] )/div,
-			   ( complexNumber2[ 0 ] * complexNumber1[ 1 ] - complexNumber1[ 0 ] * complexNumber2[ 1 ] ) /div )
+		answ =[ ( complexNumber1[ 0 ] * complexNumber2[ 0 ] + complexNumber1[ 1 ] * complexNumber2[ 1 ] )/div,
+			   ( complexNumber2[ 0 ] * complexNumber1[ 1 ] - complexNumber1[ 0 ] * complexNumber2[ 1 ] ) /div ]
 
 		return answ
 		
@@ -31,8 +31,8 @@ def divComplexNumber(   complexNumber1, complexNumber2 ):
 		print('Se produjo el siguiente error',error)
 	
 def conjugated( complexNumber ):
-	answ = ( complexNumber[ 0 ], 
-			 -complexNumber[ 1 ] )
+	answ = [ complexNumber[ 0 ], 
+			 -complexNumber[ 1 ] ]
 
 	return answ
 
@@ -57,6 +57,6 @@ def phase( complexNumber ):
 
 def cartesianToPolar( complexNumber ):
 	angle = phase( complexNumber  )
-	answ = ( module( complexNumber) ,
-			angle )
+	answ = [ module( complexNumber) ,
+			angle ]
 	return answ 
