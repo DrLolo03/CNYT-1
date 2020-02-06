@@ -64,12 +64,12 @@ def multiplicaMat( mat1, mat2 ):
      
     if ( col1 == row2 ):
         
-        answ = [ [  ( 0,0 )  for t in range( col2 ) ] for x in range( row1 ) ]
+        answ = [ [  [ 0,0 ]  for t in range( col2 ) ] for x in range( row1 ) ]
         
         for i in range( row1 ):
             for j in range( col2 ):
                 
-                current = ( 0, 0 ) 
+                current = [ 0, 0 ]
                 
                 for k in range( row2 ):
 
@@ -158,8 +158,9 @@ def isUnitary( matrix ):
     
     if row == col :
         adjoint = adjointMatrix( matrix )
-        
-        return multiplicaMat( matrix , adjoint)  == multiplicaMat( adjoint , matrix)
+        print(  multiplicaMat( adjoint , matrix ) )
+        print(   multiplicaMat( matrix , adjoint ))
+        return multiplicaMat( adjoint , matrix )  == multiplicaMat( matrix , adjoint )
         
         
         
@@ -196,5 +197,33 @@ def tensorProduct( matrix1, matrix2 ):
                                                     matrix2[ i % fil1 ][ j % fil2 ] )
 
         return answ
+
+def circuit():
+    o = [ [ 1,0 ], [ 0, 0 ]]
+
+    oo = tensorProduct( o, o )
+    X = [ [ [0,0], [1,0] ],[ [1,0], [0,0] ] ]
+    H = multiEscalMat( [1/ math.sqrt(  2 )  ,0]  , [ [ [1,0], [1,0] ], [ [1,0], [-1,0] ] ] )
+
     
-    
+    M1 = tensorProduct( X, H )
+    M2 = tensorProduct( H, H )
+
+    M3 = actionMatrixOnVector( M1, oo )
+
+    y = actionMatrixOnVector( M2, M3 )
+    print( y )
+circuit()
+
+"""
+def main():
+    a = [1,1]
+    b = [0,0]
+    c = [0,0]
+    d = [1,-1]
+    matrix = [[a,b],[c,d]]
+    print( matrix )
+    print( isHermitan(  matrix ) ) 
+    print( isUnitary( matrix ) )
+main()
+"""
