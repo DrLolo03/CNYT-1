@@ -1,6 +1,17 @@
 import math 
 from complexNumberLibrary import *
 
+def subVect( vect1, vect2 ):
+    length = len( vect1 )
+    
+    if ( length == len( vect2 ) ):
+            
+        for x in range( length ):
+                vect1[ x ] = sub( vect1[ x ], vect2[ x ] )
+            
+        return vect1
+
+
 def sumVect( vect1, vect2 ):
     length = len( vect1 )
     
@@ -9,7 +20,7 @@ def sumVect( vect1, vect2 ):
         for x in range( length ):
                 vect1[ x ] = suma( vect1[ x ], vect2[ x ] )
             
-    return vect1
+        return vect1
             
 
 def inverseVect( vect ):
@@ -56,35 +67,14 @@ def multiEscalMat( complexNumber , mat ):
             mat[ i ][ j ] = multComplexNumber( complexNumber , mat[ i ][ j ] )
 
     return mat
-
-def multiplicaMat( mat1, mat2 ):
-
-    row1, col1 = len( mat1 ),len( mat1[ 0 ] )
-    row2, col2 =  len( mat2 ), len( mat2[ 0 ] )
-     
-    if ( col1 == row2 ):
-        
-        answ = [ [  [ 0,0 ]  for t in range( col2 ) ] for x in range( row1 ) ]
-        
-        for i in range( row1 ):
-            for j in range( col2 ):
-                
-                current = [ 0, 0 ]
-                
-                for k in range( row2 ):
-
-                    mult =  multComplexNumber( mat1[ i ][ k ], mat2[ k ][ j ]  ) 
-                    
-                    current =  suma( current , mult ) 
-                    
-                answ[ i ][ j ]  = current
-
-        return answ
-    print("Las dimensiones de las matrices, no son los adecuados para su multiplicacion")
     
 
 def transpMatrix( matrix ):
     row, col = len( matrix ), len( matrix[ 0 ] )
+    
+    if ( type( matrix[ 0 ][ 0 ] ) is int ):
+        return matrix
+    
     answ  = [ [ 0 for x in range ( row ) ] for t in range( col ) ]
     
     for i in range( col ):
@@ -97,6 +87,11 @@ def transpMatrix( matrix ):
 def conjugatedMatrix( matrix ):
     row, col = len( matrix ), len( matrix [ 0 ] )
 
+    if ( type( matrix[ 0 ][ 0 ] ) is int ):
+        for x in range( row ):
+            matrix[ x ] = conjugated( matrix[x] )
+        return matrix
+    
     for i in range( row ):
         for j in range( col ):
             matrix[ i ][ j ] = conjugated( matrix[ i ][ j ] )
@@ -107,19 +102,30 @@ def adjointMatrix( matrix  ):
     answ  = conjugatedMatrix( transpMatrix( matrix  ) )
     return answ
 
-def traceMatrix( matrix ):
-    answ = [0 , 0]
+def multiplicaMat( mat1, mat2 ):
 
-    row = len( matrix )
-    for i in range( row ):
-        answ =  suma( matrix[ i ][ i ], answ )
+    row1, col1 = len( mat1 ),len( mat1[ 0 ] )
+    row2, col2 =  len( mat2 ), len( mat2[ 0 ] )
+     
+    if ( col1 == row2 ):
         
-    return answ
+        answ = [ [  ( 0,0 )  for t in range( col2 ) ] for x in range( row1 ) ]
+        
+        for i in range( row1 ):
+            for j in range( col2 ):
+                
+                current = ( 0, 0 ) 
+                
+                for k in range( row2 ):
 
-def internalProduct( matrix1 , matrix2 ):
-    
-    asnw = traceMatrix( multiplicaMat( transpMatrix( matrix1 ), matrix2,0 ) )
+                    mult =  multComplexNumber( mat1[ i ][ k ], mat2[ k ][ j ]  ) 
+                    
+                    current =  suma( current , mult ) 
+                    
+                answ[ i ][ j ]  = current
 
+        return answ
+    print("Las dimensiones de las matrices, no son los adecuados para su multiplicacion")
 
 def actionMatrixOnVector( matrix, vector ):
     row, col  = len( matrix ), len( matrix [ 0 ] )
@@ -136,21 +142,33 @@ def actionMatrixOnVector( matrix, vector ):
                 
         return answ
     print("Las dimensiones de las matrices, no son los adecuados para su multiplicacion")
+
+
+def internalProduct( vector1 , vector2 ):
+    answ = [ 0, 0 ]
+    
+    for x in range( len( vector1 ) ):
+        answ = suma( answ, multComplexNumber( vector1[ x ], vector2[ x ] ) )
+
+    return answ
+
+
+
+
                 
     
     
     
          
-def normMatrix( matrix  ):
-    #revisar
-    answ  = multiplicaMat( adjointMatrix( matrix ) , matrix )
-    return math.sqrt( traceMatrix( answ )[ 0 ] )
+def normVector( vector  ):
+    answ  = math.sqrt( internalProduct( vector, vector ) )
+    return answ[ 0 ]
 
 
 
-def distMatrix( matrix1, matrix2 ):
+def distVector( vector1, vector2 ):
     
-    answ = normMatrix( matrix1 - matrix2 )
+    answ = normMatrix( subVect( vector1, vector2) )
     return answ    
 
 def isUnitary( matrix ):
@@ -158,9 +176,8 @@ def isUnitary( matrix ):
     
     if row == col :
         adjoint = adjointMatrix( matrix )
-        print(  multiplicaMat( adjoint , matrix ) )
-        print(   multiplicaMat( matrix , adjoint ))
-        return multiplicaMat( adjoint , matrix )  == multiplicaMat( matrix , adjoint )
+        
+        return multiplicaMat( matrix , adjoint)  == multiplicaMat( adjoint , matrix)
         
         
         
@@ -197,7 +214,8 @@ def tensorProduct( matrix1, matrix2 ):
                                                     matrix2[ i % fil1 ][ j % fil2 ] )
 
         return answ
-
+    
+    
 def circuit():
     o = [ [ 1,0 ], [ 0, 0 ]]
 
@@ -213,17 +231,3 @@ def circuit():
 
     y = actionMatrixOnVector( M2, M3 )
     print( y )
-circuit()
-
-"""
-def main():
-    a = [1,1]
-    b = [0,0]
-    c = [0,0]
-    d = [1,-1]
-    matrix = [[a,b],[c,d]]
-    print( matrix )
-    print( isHermitan(  matrix ) ) 
-    print( isUnitary( matrix ) )
-main()
-"""
