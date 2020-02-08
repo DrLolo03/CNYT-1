@@ -69,7 +69,10 @@ class TestLibComplex(unittest.TestCase):
         self.assertEqual( cartesianToPolar( b ) ,[  5* math.sqrt( 2 ), math.radians( 135 ) ])
         self.assertEqual( cartesianToPolar( c ) ,[  5* math.sqrt( 2 ), math.radians( 225 ) ])
         self.assertEqual( cartesianToPolar( d ) ,[  5* math.sqrt( 2 ), math.radians( 315 ) ])
-        
+
+    def testPhase( self ):
+        self.assertEqual( phase( [1,1] ), 0.7853981633974483 )
+        self.assertEqual( phase( [-1,1] ), 2.356194490192345 )
         
 
 if __name__ == '__main__':

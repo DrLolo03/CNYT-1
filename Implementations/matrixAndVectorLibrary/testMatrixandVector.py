@@ -7,9 +7,6 @@ b = [ 2,4 ]
 c = [ 6,5 ]
 d = [ 4, 9 ]
 
-def printRta( matrix ):
-    print( matrix )
-
 
 
 class TestLibComplex(unittest.TestCase):

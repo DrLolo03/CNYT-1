@@ -172,13 +172,26 @@ def distVector( vector1, vector2 ):
 
     return answ    
 
+def identityMatrix( matrix ):
+    row,  column  = len( matrix ) , len( matrix[ 0 ] )
+    
+    matrix=[[[] for i in range( column )] for j in range( row )]
+    
+    for i in range( row ):
+        for j in range(  column ):
+            if i==j:
+                matrix[ i ][ j ] =  [ 1,0]
+            else:
+                matrix[ i ][ j ] =  [ 0,0 ]
+    return matrix
+
 def isUnitary( matrix ):
     row, col = len( matrix ), len( matrix[ 0 ] )
     
     if row == col :
         adjoint = adjointMatrix( matrix )
         
-        return multiplicaMat( matrix , adjoint)  == multiplicaMat( adjoint , matrix)
+        return ( multiplicaMat( matrix , adjoint) == identityMatrix( matrix ) )and ( multiplicaMat( matrix , adjoint)  == multiplicaMat( adjoint , matrix) )
         
         
         

@@ -36,6 +36,7 @@ def conjugated( complexNumber ):
 
 	return answ
 
+
 def module( complexNumber ):
 	answ = math.sqrt( (complexNumber[ 0 ])**2 + (complexNumber[ 1 ]) **2 )
 	
