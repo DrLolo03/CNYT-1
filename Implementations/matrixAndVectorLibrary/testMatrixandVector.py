@@ -65,15 +65,7 @@ class TestLibComplex(unittest.TestCase):
         
         self.assertEqual( multiEscalMat( c, [ [ a,a ],[ b,b ] ] ),
                           [[[-9, 23], [-9, 23]], [[-8, 34], [-8, 34]]] )
-        
-        
-    def testMultiplicaMat( self ):
 
-        self.assertEqual( multiplicaMat( [ [ a,a ],[ b,b ] ] , [ [ b,a ],[ a,b ] ] ),
-                          [[[-18, 16], [-18, 16]], [[-22, 26], [-22, 26]]] )
-        
-        self.assertEqual( multiplicaMat( [ [ a,a,b],[ b,b,a ] ] , [ [ b,a ],[ a,b ],[b,b] ] ),
-                          [[[-30, 32], [-30, 32]], [[-32, 36], [-32, 36]]] )
         
 
     def testTranspMatrix( self ):
@@ -101,6 +93,14 @@ class TestLibComplex(unittest.TestCase):
         self.assertEqual( adjointMatrix( [ [ a,b, c],[ c,b,a ] ] ),
                           [[[1, -3], [6, -5]], [[2, -4], [2, -4]], [[6, -5], [1, -3]]] )
 
+    def testMultiplicaMat( self ):
+
+        self.assertEqual( multiplicaMat( [ [ a,a ],[ b,b ] ] , [ [ b,a ],[ a,b ] ] ),
+                          [[[-18, 16], [-18, 16]], [[-22, 26], [-22, 26]]] )
+        
+        self.assertEqual( multiplicaMat( [ [ a,a,b],[ b,b,a ] ] , [ [ b,a ],[ a,b ],[b,b] ] ),
+                          [[[-30, 32], [-30, 32]], [[-32, 36], [-32, 36]]] )
+
     def actionMatrixOnVector( self ):
         a = [ 1,4 ]
         b = [ 4, 0 ]
@@ -112,16 +112,21 @@ class TestLibComplex(unittest.TestCase):
                           [[-17, 40], [49, 27], [35, 46]] )
         
     
-    def testNormMatrix( self ):
-        a, b = [ 3, 0 ], [ 5, 0 ]
+    def testNormVector( self ):
+        a, b = [ 3, 0 ], [ -6, 0 ]
         c = [ 2, 0 ]
 
-        #printRta( normMatrix( [ [ a, b ],[ c, b ] ] ) )
-        pass
+        self.assertEqual( normVector( [ a, b, c ] ), math.sqrt( 49 )  )
+        
 
 
-    def testDistMatrix( self ) :
-        pass
+    def testDistVector( self ) :
+        a, b = [ 3, 0 ], [ 1, 0 ]
+        c, d = [ 2, 0 ], [ -1,0 ]
+
+        self.assertEqual( distVector( [ a, b, c ],[ c ,c, d] ), math.sqrt( 11 )  )
+        
+        
 
     def testIsUnitary( self ):
         a, b = [ 1,0 ], [ 0, 0 ]

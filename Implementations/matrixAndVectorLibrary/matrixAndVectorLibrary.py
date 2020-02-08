@@ -161,14 +161,15 @@ def internalProduct( vector1 , vector2 ):
     
          
 def normVector( vector  ):
-    answ  = math.sqrt( internalProduct( vector, vector ) )
-    return answ[ 0 ]
+    answ  = math.sqrt( abs( internalProduct( vector, vector )[ 0 ] ) )
+    
+    return answ
 
 
 
 def distVector( vector1, vector2 ):
-    
-    answ = normMatrix( subVect( vector1, vector2) )
+    answ = normVector( subVect( vector1, vector2) )
+
     return answ    
 
 def isUnitary( matrix ):
