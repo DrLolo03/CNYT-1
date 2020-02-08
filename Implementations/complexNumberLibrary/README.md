@@ -30,6 +30,7 @@ El lenguaje en el que se desarrollo la libreria es
 
 - python 3
 
+
 ### Pre-requisitos
 
 Tener instalado una version mayor o igual a python 3
@@ -38,6 +39,7 @@ Tener instalado una version mayor o igual a python 3
 ### Instalando y ejecucion del programa
 
 en caso de no tener instalado python o tener python 2.7 ,  se podra descargar del siguiente link https://www.python.org/downloads/
+
 
 ## Ejecutando Programa 
 
@@ -63,9 +65,11 @@ python complexNumberLibrary.py
 
 Las pruebas en un programa son muy importantes, tanto es asi que estas permiten verificar que las funcionalidades del programa se cumplen en cada iteración correctamente.
 
-Para este caso se usa la libreria de python  **unittest**, la cual es  importada con la linea de codigo **import unittest** que se encuentra en testComplexNumber.py , en este .py se encontraran 2 pruebas por cada una de las funciones implementadas de numeros complejos.
+Para este caso se usa la libreria de python  **unittest**; la cual es usada para comparar un resultado con otro diciendo si son iguales o no, esta es  importada con la linea de codigo **import unittest** que se encuentra en testComplexNumber.py .
 
-a continuacion se mostrara un ejemplo de una prueba de la funcion suma,  de forma analoga sera para las demas funciones:
+En este .py se encontraran 3 pruebas por cada una de las funciones implementadas de numeros complejos.
+
+A continuacion se mostrara un ejemplo de una prueba de la funcion suma la cual nos dice si el resultado de la suma entre los vectores a y b es igual a [ 4, 3  ] ,  de forma analoga sera para las demas funciones:
 
 ```
 def testSuma(self):
@@ -101,7 +105,7 @@ cd /Implementations/complexNumberLibrary
 
 ## Autor
 
-**Iván Camilo Rincón Saavedra ** - *Latest Commmit* - [Rincon10](https://github.com/Rincon10)
+**Iván Camilo Rincón Saavedra** - *Latest Commmit* - [Rincon10](https://github.com/Rincon10)
 
 
 ## Referencias
