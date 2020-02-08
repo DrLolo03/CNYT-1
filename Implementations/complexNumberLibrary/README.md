@@ -14,9 +14,20 @@ En este repositorio se realizo la implementacion de una libreria sobre numeros c
 
 ## Empezando
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Antes de empesar se debe tener en cuenta la forma en que los numeros complejos seran representados en esta libreria, como se sabe los numeros complejos se caracterzan por tener una parte real y una imaginaria como se obvserva en el siguiente ejemplo: 
 
-### Lenguaje 
+```
+1 + 2i
+```
+lo equivalente para la libreria sera una lista de longitud 2, cuya posicion 0 sera la parte real y la posicion 1 la parte imaginaria; con respecto al numero anterior el equivalente en la libreria  sera:
+
+```
+[ 1, 2]
+```
+
+### Lenguaje
+El lenguaje en el que se desarrollo la libreria es
+
 - python 3
 
 ### Pre-requisitos
@@ -32,14 +43,14 @@ en caso de no tener instalado python o tener python 2.7 ,  se podra descargar de
 
 Para ejecutar el programa se deben seguir los siquientes pasos:
 
-1) Descargar el repositorio en git hub usando el comando git clone  
+1) Descargar el repositorio en git usando el comando git clone  
 ```
 git clone https://github.com/Rincon10/CNYT.git
 ```
 
 2)  abrir el lugar donde se encuentra la implementacion
 ```
-cd /Implementations/complexNumberLibrary
+cd Implementations/complexNumberLibrary
 
 ```
 3) ejecutar el archivo con el siguiente comando 
@@ -50,18 +61,17 @@ python complexNumberLibrary.py
 
 ### Pruebas del programa 
 
-Explain what these tests test and why
+Las pruebas en un programa son muy importantes, tanto es asi que estas permiten verificar que las funcionalidades del programa se cumplen en cada iteración correctamente.
+
+Para este caso se usa la libreria de python  **unittest**, la cual es  importada con la linea de codigo **import unittest** que se encuentra en testComplexNumber.py , en este .py se encontraran 2 pruebas por cada una de las funciones implementadas de numeros complejos.
+
+a continuacion se mostrara un ejemplo de una prueba de la funcion suma,  de forma analoga sera para las demas funciones:
 
 ```
-Give an example
-```
-
-
-
-Explain what these tests test and why
-
-```
-Give an example
+def testSuma(self):
+        a, b = [ 3, -1 ],  [ 1, 4 ]
+        
+        self.assertEqual( suma( a, b ), [ 4, 3  ] )
 ```
 
 
@@ -88,16 +98,14 @@ cd /Implementations/complexNumberLibrary
  python testComplexNumber.py
 ```
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Autor
 
-***Iván Camilo Rincón Saavedra *** - *Latest Commmit* - [Rincon10](https://github.com/Rincon10)
+**Iván Camilo Rincón Saavedra ** - *Latest Commmit* - [Rincon10](https://github.com/Rincon10)
 
 
 ## Referencias
+El modelo que se siguio para diseñar el readme fue tomado del usuario:
 
 [PurpleBooth](https://github.com/PurpleBooth)
 
