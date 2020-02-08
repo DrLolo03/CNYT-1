@@ -1,4 +1,4 @@
-﻿#modificar
+
 # complexNumberLibrary
 
 En este repositorio se realizo la implementacion de una libreria sobre numeros complejos, la cual es capaz de calcular:
@@ -12,39 +12,41 @@ En este repositorio se realizo la implementacion de una libreria sobre numeros c
 - Conversión entre representaciones polar y cartesiano
 - Retornar la fase de un número complejo.
 
-## Getting Started
+## Empezando
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+### Pre-requisitos
 
-What things you need to install the software and how to install them
+Tener instalado una version mayor o igual a python 3
 
-```
-Give examples
-```
 
-### Installing
+### Instalando
 
-A step by step series of examples that tell you how to get a development env running
+en caso de no tener instalado python o tener python 2.7 ,  se podra descargar del siguiente link https://www.python.org/downloads/
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
+## Ejecutando Pruebas
 
-Explain how to run the automated tests for this system
+Para ejecutar las pruebas se deben seguir los siquientes pasos:
+
+1) Descargar el repositorio en git hub usando el comando git clone  
+```
+git clone https://github.com/Rincon10/CNYT.git
+```
+
+2)  abrir el lugar donde se encuentra la carpeta y ejecutar el comando complexNumberLibrary.py
+```
+cd Implementations\complexNumberLibrary
+
+```
+3) ejecutar el archivo 
+
+```
+complexNumberLibrary.py
+```
 
 ### Break down into end to end tests
 
@@ -82,16 +84,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Iván Camilo Rincón Saavedra ** - *Latest Commmit* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Iván Camilo Rincón Saavedra ** - *Latest Commmit* - [Rincon10](https://github.com/Rincon10)
 
 
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
