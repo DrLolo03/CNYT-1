@@ -1,7 +1,7 @@
 
 # complexNumberLibrary
 
-En este repositorio se realizo la implementacion de una libreria sobre numeros complejos, la cual es capaz de calcular:
+En este programa se realizo la implementacion de una libreria sobre numeros complejos, la cual es capaz de calcular:
 
 - Suma 
 - Producto
@@ -14,7 +14,7 @@ En este repositorio se realizo la implementacion de una libreria sobre numeros c
 
 ## Empezando
 
-Antes de empezar se debe tener en cuenta la forma en que los numeros complejos seran representados, como se sabe los numeros complejos se caracterzan por tener una parte real y una imaginaria como se obvserva en el siguiente ejemplo: 
+Antes de empezar se debe tener en cuenta la forma en que los numeros complejos seran representados, como se sabe los numeros complejos se caracterizan por tener una parte real y una imaginaria como se obvserva en el siguiente ejemplo: 
 
 ```
 1 + 2i
@@ -33,12 +33,19 @@ El lenguaje en el que se desarrollo la libreria es
 
 ### Pre-requisitos
 
-Tener instalado una version mayor o igual a python 3
+-Tener instalado una version mayor o igual a python 3
+-Es opcional tener instalado git 
 
 
 ### Instalando y ejecucion del programa
 
-en caso de no tener instalado python o tener python 2.7 ,  se podra descargar del siguiente link https://www.python.org/downloads/
+En caso de no tener instalado python o tener python 2.7 ,este  se podra descargar del siguiente link https://www.python.org/downloads/ .
+
+En caso de no tener instalado git, este  se podra descargar del siguiente link 
+https://git-scm.com/downloads.
+
+
+
 
 
 ## Ejecutando Programa 
