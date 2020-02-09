@@ -1,23 +1,23 @@
-## complexNumberLibrary
+## matrixAndVectorLibrary
 En este programa se realizo la implementacion de operaciones para vectores y matrices  complejas, la cual es capaz de realizar las siguientes operaciones:
 
--Adición de vectores complejos.
--Inverso (aditivo) de un vector complejo.
--Multiplicación de un escalar por un vector complejo.
--Adición de matrices complejas.
--Inversa (aditiva) de una matriz compleja.
--Multiplicación de un escalar por una matriz compleja.
--Transpuesta de una matriz/vector
--Conjugada de una matriz/vector
--Adjunta (daga) de una matriz/vector
--Producto de dos matrices (de tamaños compatibles)
--Función para calcular la "acción" de una matriz sobre un vector.
--Producto interno de dos vectores
--Norma de un vector
--Distancia entre dos vectores
--Revisar si una matriz es unitaria
--Revisar si una matriz es Hermitiana
--Producto tensor de dos matrices/vectores
+- Adición de vectores complejos.
+- Inverso (aditivo) de un vector complejo.
+- Multiplicación de un escalar por un vector complejo.
+- Adición de matrices complejas.
+- Inversa (aditiva) de una matriz compleja.
+- Multiplicación de un escalar por una matriz compleja.
+- Transpuesta de una matriz/vector
+- Conjugada de una matriz/vector
+- Adjunta (daga) de una matriz/vector
+- Producto de dos matrices (de tamaños compatibles)
+- Función para calcular la "acción" de una matriz sobre un vector.
+- Producto interno de dos vectores
+- Norma de un vector
+- Distancia entre dos vectores
+- Revisar si una matriz es unitaria
+- Revisar si una matriz es Hermitiana
+- Producto tensor de dos matrices/vectores
 
 
 ## Empezando
@@ -46,14 +46,24 @@ por ejemplo El conjunto de vectores de longitud 2 lo denominaremos como C2 =C×C
  | 5 + 3i |
  | 3 + 6i |
 ```
-lo equivalente para la libreria sera una lista de longitud de la dimencion de c, cuya cada posicion sera un numero imaginario; con respecto al numero anterior el equivalente en la libreria  sera:
+lo equivalente para la libreria sera una lista de longitud de la dimension de c, cuya cada posicion sera un numero imaginario; con respecto al numero anterior el equivalente en la libreria  sera:
 ```
 [ [ 5,3 ], [ 3, 6] ]
 ```
 
 **Matrices  complejas**
+ Las matrices compleajas se pueden ver como C m×n, el conjunto de todas las matrices m-por-n **(matrices bidimensionales)** con entradas complejas, es un espacio vectorial complejo
 
 
+**Ejemplo de una matriz en c 2x2:**
+```
+ | 5 + 3i   8 + 9i |
+ | 3 + 6i   3 - i  |
+```
+lo equivalente para la libreria sera una matriz, cuya cada posicion sera una lista de numeros imaginario; con respecto al numero anterior el equivalente en la libreria  sera:
+```
+[ [ [ 5,3 ], [ 8, 9 ] ], [ [ 3, 6], [3,- 1 ] ] ]
+```
 
 ### Pre-requisitos
 
@@ -83,13 +93,13 @@ git clone https://github.com/Rincon10/CNYT.git
 
 2)  abrir el lugar donde se encuentra la implementacion
 ```
-cd Implementations/complexNumberLibrary
+cd Implementations/matrixAndVectorLibrary
 
 ```
 3) ejecutar el archivo con el siguiente comando 
 
 ```
-python complexNumberLibrary.py
+python matrixAndVectorLibrary.py
 ```
 
 ### Pruebas del programa 
@@ -100,13 +110,13 @@ Para este caso se usa la libreria de python  **unittest**; la cual es usada para
 
 En este .py se encontraran 3 pruebas por cada una de las funciones implementadas de numeros complejos.
 
-A continuacion se mostrara un ejemplo de una prueba de la funcion suma la cual nos dice si el resultado de la suma entre los vectores a y b es igual a [ 4, 3  ] ,  de forma analoga sera para las demas funciones:
+A continuacion se mostrara un ejemplo de una prueba de la funcion suma la cual nos dice si el resultado de la suma entre los vectores a y b es igual a [ [ 2, 6 ], [ 4, 8 ] ] ,  de forma analoga sera para las demas funciones:
 
 ```
-def testSuma(self):
-        a, b = [ 3, -1 ],  [ 1, 4 ]
+def testSumVect(self):
         
-        self.assertEqual( suma( a, b ), [ 4, 3  ] )
+        self.assertEqual( sumVect( [ a, b ], [a ,b ] ),
+                          [[2, 6], [4, 8]] )
 ```
 
 
