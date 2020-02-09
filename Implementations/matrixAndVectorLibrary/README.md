@@ -25,7 +25,7 @@ En este programa se realizo la implementacion de operaciones para vectores y mat
 Antes de empezar se debe tener en cuenta la forma en que los numeros complejos seran representados, vectores complejos, matrices complejas .
 
 **Numeros Complejos**
-Como se sabe los numeros complejos se caracterizan por tener una parte real y una imaginaria como se obvserva en el siguiente ejemplo: 
+Como se sabe los numeros complejos se caracterizan por tener una parte real y una imaginaria como se observa en el siguiente ejemplo: 
 
 ```
 1 + 2i
