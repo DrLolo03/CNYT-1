@@ -14,7 +14,7 @@ En este programa se realizo la implementacion de una libreria sobre numeros comp
 
 ## Empezando
 
-Antes de empezar se debe tener en cuenta la forma en que los numeros complejos seran representados, como se sabe los numeros complejos se caracterizan por tener una parte real y una imaginaria como se obvserva en el siguiente ejemplo: 
+Antes de empezar se debe tener en cuenta la forma en que los numeros complejos seran representados, como se sabe los numeros complejos se caracterizan por tener una parte real y una imaginaria como se observa en el siguiente ejemplo: 
 
 ```
 1 + 2i
