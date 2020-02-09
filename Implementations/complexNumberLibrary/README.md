@@ -76,7 +76,7 @@ Para este caso se usa la libreria de python  **unittest**; la cual es usada para
 
 En este .py se encontraran 3 pruebas por cada una de las funciones implementadas de numeros complejos.
 
-A continuacion se mostrara un ejemplo de una prueba de la funcion suma la cual nos dice si el resultado de la suma entre los vectores a y b es igual a [ 4, 3  ] ,  de forma analoga sera para las demas funciones:
+A continuacion se mostrara un ejemplo de una prueba de la funcion suma la cual nos dice si el resultado de la suma entre los numeros complejos a y b es igual a [ 4, 3  ] ,  de forma analoga sera para las demas funciones:
 
 ```
 def testSuma(self):
