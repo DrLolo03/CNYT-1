@@ -47,7 +47,7 @@ por ejemplo El conjunto de vectores de longitud 2 lo denominaremos como C2 =C×C
  | 5 + 3i |
  | 3 + 6i |
 ```
-lo equivalente para la libreria sera una lista de longitud de la dimension de c, cuya cada posicion sera un numero imaginario; con respecto al numero anterior el equivalente en la libreria  sera:
+lo equivalente para la libreria sera una lista de longitud de la dimension de c, cuya cada posicion sera un numero imaginario; con respecto al numero anterior el equivalente en la libreria  sera :
 ```
 [ [ 5,3 ], [ 3, 6] ]
 ```
