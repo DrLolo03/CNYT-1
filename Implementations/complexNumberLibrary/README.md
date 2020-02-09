@@ -120,4 +120,3 @@ El modelo que se siguio para diseñar el readme fue tomado del usuario:
 
 [PurpleBooth](https://github.com/PurpleBooth)
 
-
