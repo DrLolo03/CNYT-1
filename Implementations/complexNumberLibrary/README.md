@@ -39,7 +39,8 @@ El lenguaje en el que se desarrollo la libreria es
 
 ### Instalando y ejecucion del programa
 
-En caso de no tener instalado python o tener python 2.7 ,este  se podra descargar del siguiente link https://www.python.org/downloads/ .
+En caso de no tener instalado python o tener python 2.7 ,este  se podra descargar del siguiente link 
+https://www.python.org/downloads/ .
 
 En caso de no tener instalado git, este  se podra descargar del siguiente link 
 https://git-scm.com/downloads.
