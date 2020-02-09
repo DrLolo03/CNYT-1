@@ -99,7 +99,7 @@ git clone https://github.com/Rincon10/CNYT.git
 
 2)  abrir el lugar donde se encuentra la implementacion
 ```
-cd /Implementations/complexNumberLibrary
+cd Implementations/complexNumberLibrary
 
 ```
 
