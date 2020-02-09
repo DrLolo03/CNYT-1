@@ -108,6 +108,11 @@ class TestLibComplex(unittest.TestCase):
         self.assertEqual( actionMatrixOnVector( [[ a, c, d],[ b, c ,b],[ d, b, e]], [ e, d, c] ),
                           [[-17, 40], [49, 27], [35, 46]] )
         
+    def testInternalProduct( self ):
+        a, b = [ 3, 0 ], [ -6, 0 ]
+        c = [ 2, 0 ]
+
+        self.assertEqual( internalProduct( [ a, b, c ], [ a, b, c ])[0],49  )
     
     def testNormVector( self ):
         a, b = [ 3, 0 ], [ -6, 0 ]
