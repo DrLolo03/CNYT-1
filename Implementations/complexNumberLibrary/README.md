@@ -33,8 +33,8 @@ El lenguaje en el que se desarrollo la libreria es
 
 ### Pre-requisitos
 
--Tener instalado una version mayor o igual a python 3
--Es opcional tener instalado git 
+- Tener instalado una version mayor o igual a python 3
+- Es opcional tener instalado git 
 
 
 
