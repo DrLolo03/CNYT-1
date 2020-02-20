@@ -218,12 +218,14 @@ def tensorProduct( matrix1, matrix2 ):
         return answ 
                 
     
-    elif (  ( fil1 == col1) and ( fil2 == col2 ) ):
+    else:
         
         answ = [ [ [ 0,0 ] for x in range( size ) ]for x in range( size ) ]
         
         for i in range( size ):
             for j in range( size ):
+		print( i//fil1 , j//fil2 )
+                                                    matrix2[ i % fil1 ][ j % fil2 ])
                 answ[ i ][ j ] = multComplexNumber( matrix1[ i//fil1 ][ j//fil2 ] ,
                                                     matrix2[ i % fil1 ][ j % fil2 ] )
 
