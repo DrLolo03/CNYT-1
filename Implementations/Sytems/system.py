@@ -87,8 +87,8 @@ def taller2 ():
     vector = [[0,0] for t in range( size * size2 )]
 
     M[1][0] =[ 1/3,0]
-    M[1][1] =[1/2,0]
     M[0][1] =[1/6,0]
+    M[1][1] =[1/2,0]
     M[0][2] =[5/6,0]
     M[2][0] =[2/3,0]
     M[2][1] =[1/3,0]
@@ -101,16 +101,17 @@ def taller2 ():
 
     for el in M:
         print(el)
-    print()
+    print("-------")
 
     for el in N:
         print(el)
-
+    print("-------")
+    
     answ = tensorProduct( M,N )
 
     for el in answ:
         print(el)
-        
+    print("-------")   
           
     
 def main():

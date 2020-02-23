@@ -205,8 +205,8 @@ def tensorProduct( matrix1, matrix2 ):
     fil1 ,col1 = len( matrix1 ), len( matrix1[ 0 ] )
     fil2 ,col2 = len( matrix2 ), len( matrix2[ 0] )
 
-    size = fil1 * fil2
     
+    size = fil1 * fil2
     if ( type( matrix1[ 0 ][ 0 ] ) is int   and  type( matrix2[ 0 ][ 0 ] ) is int ):
         answ = [ ]
         pos = 0
@@ -218,18 +218,19 @@ def tensorProduct( matrix1, matrix2 ):
         return answ 
                 
     
-    elif (  ( fil1 == col1) and ( fil2 == col2 ) ):
+    elif (  ( fil1 == col1) and ( fil2 == col2 )):
         
-        answ = [ [ [ 0,0 ] for x in range( size ) ]for x in range( size ) ]
+        answ = [ ]
+        column = 0
+        for x in range( fil1 ):
+            for y in range( fil2 ):
+                row = []
+                for z in range( col1 ):
+                    row+=escalVect( matrix2[ y ][:],matrix1[ x ][ z ][:]  )
+                    
+                answ.append( row )
         
-        for i in range( size ):
-            for j in range( size ):
-                answ[ i ][ j ] = multComplexNumber( matrix1[ i//fil1 ][ j//fil2 ] ,
-                                                    matrix2[ i % fil1 ][ j % fil2 ] )
-
-        return answ
-    
-    
+        return answ   
 def circuit():
     o = [ [ 1,0 ], [ 0, 0 ]]
 
