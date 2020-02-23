@@ -11,10 +11,19 @@ def deterministicSystem( matrix , vectIni, clicks  ):
         for el in vectAnsw:
             print(el)
         return vectAnsw
-    return -1
+    return vectIni
 
-def probabilisticSystem( matrix, vectIni, cliks ):
-    pass
+def probabilisticSystem( matrix, vectIni, clicks ):
+    if ( clicks  > 0 ) and ( type( clicks ) is int ):
+        length  = len( vectIni )
+        for x in range(1, clicks   ):
+            vectIni = actionMatrixOnVector( matrix , vectIni )
+        vectAnsw = actionMatrixOnVector(  matrix , vectIni )
+        
+        for el in vectAnsw:
+            print(el[0]*100)
+        return vectAnsw
+    return vectIni
     
     
 
@@ -81,6 +90,10 @@ def taller2 ():
     print("ingrese el tamaño de la matriz n")
     
     size2 = int( stdin.readline().strip() )
+
+    print("numero de clicks")
+    cliks = int( stdin.readline().strip() )
+    
     M = [ [[0,0] for y in range ( size )] for c in range( size ) ]
     N = [ [[0,0] for y in range ( size2 )] for c in range( size2 ) ]
     
@@ -99,19 +112,12 @@ def taller2 ():
     N[0][1]=[ 2/3,0]
     N[1][0]=[ 2/3,0]
 
-    for el in M:
-        print(el)
-    print("-------")
+    vector[0] = [0.8,0]
+    vector[1] = [0.2,0]
 
-    for el in N:
-        print(el)
-    print("-------")
-    
-    answ = tensorProduct( M,N )
+    newMatrix  = tensorProduct( M,N )
 
-    for el in answ:
-        print(el)
-    print("-------")   
+    answ = probabilisticSystem( newMatrix, vector, cliks )
           
     
 def main():
