@@ -29,3 +29,4 @@ def main( ):
     for el in experimentBooleanMatrix( clicks ,booleanMatrix, vectIni  ):
         print( el )
 
+#Author : Iván Camilo Rincón Saavedra
