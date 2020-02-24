@@ -127,6 +127,24 @@ def multiplicaMat( mat1, mat2 ):
         return answ
     print("Las dimensiones de las matrices, no son los adecuados para su multiplicacion")
 
+def actionBoolMatrixOnVector( matrix, vector ):
+    row, col  = len( matrix ), len( matrix [ 0 ] )
+    length = len( vector )
+
+    if  ( col == length ):
+        answ = [ False for c in range( row  ) ]
+
+        for i in range( row ):
+            And = True
+            
+            for j in range( col ):
+                And = matrix[ i ][ j ] and vector[ j ]  
+                answ [ i ] = answ[ i ] or And
+            
+        return answ 
+    print("Las dimensiones de las matrices, no son los adecuados para su multiplicacion")
+
+
 def actionMatrixOnVector( matrix, vector ):
     row, col  = len( matrix ), len( matrix [ 0 ] )
     length = len( vector )
@@ -152,13 +170,6 @@ def internalProduct( vector1 , vector2 ):
 
     return answ
 
-
-
-
-                
-    
-    
-    
          
 def normVector( vector  ):
     answ  = math.sqrt( abs( internalProduct( vector, vector )[ 0 ] ) )
@@ -230,7 +241,8 @@ def tensorProduct( matrix1, matrix2 ):
                     
                 answ.append( row )
         
-        return answ   
+        return answ
+    
 def circuit():
     o = [ [ 1,0 ], [ 0, 0 ]]
 

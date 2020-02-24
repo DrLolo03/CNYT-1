@@ -1,28 +1,31 @@
-from sys import stdin
-import math
+from  matrixAndVectorLibrary import *
 
-def valid( phase, solp):
+def experimentBooleanMatrix( clicks ,booleanMatrix, vectIni  ):
+    if ( clicks >= 0 and type( clicks ) is int ):
+        for c in range( clicks ):
+            vectIni = actionBoolMatrixOnVector(booleanMatrix, vectIni)
+            
+        return vectIni
+         
+    
 
-        for x in range( phase ):
-                if ( ( abs( x - phase ) == abs( solp[x] - solp[phase] ) ) or ( solp[ phase ] == solp[x] ) ):
-                        return False
-        
-        return True
 
-def backTracking( size, phase, solp ):
-        if phase < size :
-                for x in range( size ):
-                        solp[ x ] = x
-                        mSolp = solp[ : ]
-                        
-                        if valid( phase, mSolp[:]):
-                                
-                                if phase < size - 2:
-                                        
-                                        backTracking( size, phase + 1, mSolp[:])
-                                else:
-                                        print( mSolp )
-def main():
-        n = int( stdin.readline().strip() )
-        backTracking( n, 0, [ 0 for x in range( n ) ] )    
-main()
+
+def main( ):
+    size, clicks = int( stdin.readline().strip() ), int( stdin.readline().strip() )
+    booleanMatrix = [ [ False for t in range( size )] for x in range( size  )]
+    vectIni = [ False for x in range( size ) ]
+    vectIni[ 0 ] = True
+    booleanMatrix[1][0] = True  
+    booleanMatrix[1][5]=  True 
+    booleanMatrix[2][0]= True  
+    booleanMatrix[3][2]= True
+    booleanMatrix[4][3]= True
+    booleanMatrix[5][4]= True
+
+    print(clicks, experimentBooleanMatrix( clicks ,booleanMatrix, vectIni  ))
+    print()
+    print(booleanMatrix)
+    for el in experimentBooleanMatrix( clicks ,booleanMatrix, vectIni  ):
+        print( el )
+
