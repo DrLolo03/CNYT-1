@@ -21,6 +21,14 @@ class classicalToQuantum(unittest.TestCase):
         self.assertEqual(experimentBooleanMatrix( 5 ,booleanMatrix[:], vectIni[:]   ),
                          [False, True, False, False, False, False] )
 
+    def testMultipleSlitExperiment( self ):
+        pass
+
+    def testMultipleSlitQuantumExperiment( self ):
+        pass
+
+    def testGraphProbabilitiesVector( self ):
+        pass
         
 if __name__ == '__main__':
     unittest.main()

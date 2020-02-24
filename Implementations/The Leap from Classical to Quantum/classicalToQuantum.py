@@ -1,3 +1,4 @@
+from sys import stdin 
 from  matrixAndVectorLibrary import *
 
 def experimentBooleanMatrix( clicks ,booleanMatrix, vectIni  ):
@@ -7,7 +8,15 @@ def experimentBooleanMatrix( clicks ,booleanMatrix, vectIni  ):
             
         return vectIni
          
-    
+
+def multipleSlitExperiment(  ):
+        pass
+
+def multipleSlitQuantumExperiment(  ):
+        pass
+
+def graphProbabilitiesVector(  ):
+        pass
 
 
 
