@@ -10,7 +10,9 @@ Antes de empezar se debe tener en cuenta la forma en ...........................
 ### Pre-requisitos
 
 -Tener instalado una version mayor o igual a python 3
+- Tener instalado numpy, scipy y matplotlib - python
 -Es opcional tener instalado git 
+
 
 
 ### Instalando y ejecucion del programa
@@ -20,6 +22,8 @@ https://www.python.org/downloads/ .
 
 En caso de no tener instalado git, este  se podra descargar del siguiente link 
 https://git-scm.com/downloads.
+
+En caso de no tener instalado numpy, scipy y matplotlib - python, seguir los pasos del siguiente video https://www.youtube.com/watch?v=oE4KeuVNqcQ&list=LLwZJu6f8CavefyakHGC1HEw
 
 
 
