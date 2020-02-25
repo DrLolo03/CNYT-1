@@ -60,3 +60,5 @@ def cartesianToPolar( complexNumber ):
 	answ = [ module( complexNumber) ,
 			angle ]
 	return answ 
+
+#Author : Iván Camilo Rincón Saavedra
