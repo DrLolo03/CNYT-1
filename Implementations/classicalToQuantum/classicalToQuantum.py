@@ -23,7 +23,7 @@ def quantumProbabilisticSystem( matrix, vectIni, clicks ):
     return -1
 
 def probabilisticSystem( matrix, vectIni, clicks ):
-    if ( clicks  > 0 ) and ( type( clicks ) is int ):
+    if ( clicks  >= 0 ) and ( type( clicks ) is int ):
         length  = len( vectIni )
         for x in range(clicks  ):
             vectIni = actionMatrixOnVector( matrix , vectIni )
