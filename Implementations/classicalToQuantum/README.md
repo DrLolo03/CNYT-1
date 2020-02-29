@@ -98,12 +98,6 @@ def testExperimentBooleanMatrix( self  ):
 
         self.assertEqual(experimentBooleanMatrix( 1 ,booleanMatrix[:], vectIni[:]  ),
                          [False, True, True, False, False, False] )
-
-        self.assertEqual(experimentBooleanMatrix( 3 ,booleanMatrix[:], vectIni[:]   ),
-                         [False, False, False, False, True, False] )
-
-        self.assertEqual(experimentBooleanMatrix( 5 ,booleanMatrix[:], vectIni[:]   ),
-                         [False, True, False, False, False, False] )
 ```
 
 - **Segunda prueba**: Prueba asociada al experimento #2, la cual dada una matriz de elementos que representa una probabilidad y un vector de estado inicial de un sistema probabilistico ( ** experimento de las multiples rendijas ** ), calcula el estado final que este se encontrara dado un numero de veces que este cambiara.
@@ -112,9 +106,7 @@ def testExperimentBooleanMatrix( self  ):
 def testMultipleSlitQuantumExperiment( self ):
 	matrix = [...]
 	vectIni = [...]
-        self.assertEqual( probabilisticSystem( matrix[:], vectIni[:], 1 ), [[0, 0], [0.33,0], [0.0,0]],
-                                                                            [0.33, 0.0], [0.33,0], [0.0,0]],
-                                                                            [0.0, 0.0], [0.0, 0.0],[0.0, 0.0], [0.0, 0.0]] )
+        self.assertEqual( probabilisticSystem( matrix[:], vectIni[:], 1 ), [...] )
 ```
 
 
