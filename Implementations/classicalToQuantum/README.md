@@ -14,13 +14,13 @@ De manera adicional, la libreria poseera una funcion que sera capaz de graficar 
 Antes de empezar se debe tener en cuenta la forma en .......................................
 
 
-##Funciones del programa
+## Funciones del programa
 
 ### Pre-requisitos
 
--Tener instalado una version mayor o igual a python 3
+- Tener instalado una version mayor o igual a python 3
 - Tener instalado las librerias numpy, scipy y matplotlib - python
--Es opcional tener instalado git 
+- Es opcional tener instalado git 
 
 
 
@@ -114,7 +114,7 @@ def testExperimentBooleanMatrix( self  ):
 
 
 
-- ** Cuarta prueba**: Prueba asociada a la funcion #4, la cual dado un vector de estado de un sistema probabilistico, logre graficar la probabilidad en cada uno de los estados.
+- **Cuarta prueba**:   Prueba asociada a la funcion #4, la cual dado un vector de estado de un sistema probabilistico, logre graficar la probabilidad en cada uno de los estados.
 
 ```
 def testGraphProbabilitiesVector( self ):
