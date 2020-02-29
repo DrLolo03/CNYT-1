@@ -11,10 +11,17 @@ De manera adicional, la libreria poseera una funcion que sera capaz de graficar 
 
 ## Empezando
 
-Antes de empezar se debe tener en cuenta la forma en .......................................
+Antes de empezar se debe tener en cuenta la forma en que los sistemas seran representados, cada sistema tendra una matriz de adyacencia asociada y un vector el cual representara el estado inicial del sistema, donde sus posiciones representaran el peso de  una  conexion especifica entre componentes del sistema, a continuacion se mostrar un ejemplo de un sistema deterministico.
+
+## Sistema 
+
+## Matriz asociada al sistema
+
+## Estado inicial del sistema 
+
+## Representacion en la libreria
 
 
-## Funciones del programa
 
 ### Pre-requisitos
 
@@ -67,11 +74,7 @@ Para este caso se usa la libreria de python  **unittest**; la cual es usada para
 
 ```
 def testExperimentBooleanMatrix( self  ):
-        booleanMatrix = [[False, False, False, False, False, False], [True, False, False, False, False, True],
-                         [True, False, False, False, False, False], [False, False, True, False, False, False],
-                         [False, False, False, True, False, False], [False, False, False, False, True, False]]
-
-        vectIni = [True, False, False, False, False, False]
+        booleanMatrix = [...]
 
         self.assertEqual(experimentBooleanMatrix( 1 ,booleanMatrix[:], vectIni[:]  ),
                          [False, True, True, False, False, False] )
@@ -87,10 +90,10 @@ def testExperimentBooleanMatrix( self  ):
 
 ```
 def testMultipleSlitQuantumExperiment( self ):
-	matrix = [ [....], ........,[....] ]
-	vectIni = [....]
-        self.assertEqual( probabilisticSystem( matrix[:], vectIni[:], 1 ), [[0, 0], [0.3333333333333333, 0.0],
-                                                                            [0.3333333333333333, 0.0], [0.3333333333333333, 0.0],
+	matrix = [...]
+	vectIni = [...]
+        self.assertEqual( probabilisticSystem( matrix[:], vectIni[:], 1 ), [[0, 0], [0.33,0], [0.0,0]],
+                                                                            [0.33, 0.0], [0.33,0], [0.0,0]],
                                                                             [0.0, 0.0], [0.0, 0.0],[0.0, 0.0], [0.0, 0.0]] )
 ```
 
@@ -99,17 +102,11 @@ def testMultipleSlitQuantumExperiment( self ):
 
 ```
 def testExperimentBooleanMatrix( self  ):
-	matrix = [ [....], ........,[....] ]
-	vectIni = [....]
+	matrix = [...]
+	vectIni = [...]
 
         self.assertEqual(experimentBooleanMatrix( 1 ,booleanMatrix[:], vectIni[:]  ),
                          [False, True, True, False, False, False] )
-
-        self.assertEqual(experimentBooleanMatrix( 3 ,booleanMatrix[:], vectIni[:]   ),
-                         [False, False, False, False, True, False] )
-
-        self.assertEqual(experimentBooleanMatrix( 5 ,booleanMatrix[:], vectIni[:]   ),
-                         [False, True, False, False, False, False] )
 ```
 
 
