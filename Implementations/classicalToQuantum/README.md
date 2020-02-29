@@ -152,7 +152,7 @@ cd Implementations/classicalToQuantum
 3) ejecutar las pruebas  con el siguiente comando 
 
 ```
- python testClassicalToQuantum.py
+ python classicalToQuantumTest.py
 ```
 
 
