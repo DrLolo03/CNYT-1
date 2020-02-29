@@ -15,14 +15,33 @@ Antes de empezar se debe tener en cuenta la forma en que los sistemas seran repr
 
 ## Sistema 
 ![image](https://user-images.githubusercontent.com/53798019/75600835-61b93f00-5a82-11ea-9b08-d9b01abfdc87.png)
+
 ## Matriz asociada al sistema
+![image](https://user-images.githubusercontent.com/53798019/75600862-cbd1e400-5a82-11ea-9aba-1d3151e20887.png)
 
 ## Estado inicial del sistema 
 ![image](https://user-images.githubusercontent.com/53798019/75600871-e1dfa480-5a82-11ea-974d-5d833c298ba9.png)
 
 ## Representacion en la libreria
+- Representacion de la matriz en la libreria corresponde a :
+```
+matrix = [   [ [0, 0], [0, 0] , [0, 0] ,[0, 0] ,[0, 0]    ],
+             [  [0, 0], [0, 0] , [0, 0] ,[0, 0] ,[0, 0]  ],
+	     [  [0, 0], [1, 0] , [0, 0] ,[0, 0] ,[1, 0]   ],
+	     [  [0, 0], [0, 0] , [0, 0] ,[0, 0] ,[0, 0]  ],
+	     [  [0, 0], [0, 0] , [1, 0] ,[0, 0] ,[0, 0] ],
+	     [  [1, 0], [0, 0] , [0, 0] ,[1, 0] ,[0, 0]   ]]
+```
 
-
+- Representacion del vector en la libreria corresponde a :
+```
+vector = [ [6, 0],
+ 	   [2, 0],
+	   [1, 0],
+	   [5, 0] ,
+	   [3, 0] ,
+	   [10, 0]]
+```
 
 ### Pre-requisitos
 
