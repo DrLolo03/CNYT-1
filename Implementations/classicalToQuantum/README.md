@@ -6,7 +6,7 @@ En este programa se realizo la implementacion sobre los diferentes experimentos 
 - Experimento de las múltiples rendijas cuántico.
 
 
-De manera adicional, la libreria poseera una funcion que sera capaz de graficar con un diagrama de barras  las probabilidades de un vector de estados de un sistema.
+de manera adicional, la libreria poseera una funcion que sera capaz de graficar con un diagrama de barras  las probabilidades de un vector de estados de un sistema.
 
 
 ## Empezando
