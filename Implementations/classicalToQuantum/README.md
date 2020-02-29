@@ -18,6 +18,7 @@ Antes de empezar se debe tener en cuenta la forma en que los sistemas seran repr
 ## Matriz asociada al sistema
 
 ## Estado inicial del sistema 
+![image](https://user-images.githubusercontent.com/53798019/75600871-e1dfa480-5a82-11ea-974d-5d833c298ba9.png)
 
 ## Representacion en la libreria
 
